@@ -23,7 +23,7 @@ pip install "tensorflow >= 1.13.1, < 2"
 
 ## Dataset
 
-We use the five default datasets supported by the AIF 360 toolkit. Please refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
+We use the five default datasets supported by the AIF360 toolkit. Please refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
 
 ## Scripts and results
 The repository contains five folders:
