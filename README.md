@@ -26,7 +26,7 @@ pip install "tensorflow >= 1.13.1, < 2"
 We use the five default datasets supported by the AIF 360 toolkit. Please refer to https://github.com/Trusted-AI/AIF360/tree/master/aif360/data for the raw data files.
 
 ## Scripts and results
-The repository contains four folders:
+The repository contains five folders:
 
 * ```Fair360/``` contains code for implementing the 15 bias mitigation methods in AIF360.
 
