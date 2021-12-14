@@ -36,7 +36,7 @@ The repository contains four folders:
 
 * ```Fairea/``` contains code for measuring fairness-performance trade-offs. It is implemented based on Fairea, a trade-off benchmark method proposed by [Hort et al.](https://doi.org/10.1145/3468264.3468565) in ESEC/FSE 2021.
 
-* ```Fairea/``` contains the raw results of the original models and the models after applying 17 bias mitigation methods in eight tasks. Each file in this folder has 53 columns, with the first column indicating the metric, the next 50 columns the metric values of 50 runs, and the last two columns the mean and std values of the 50 runs.
+* ```Result/``` contains the raw results of the original models and the models after applying 17 bias mitigation methods in eight tasks. Each file in this folder has 53 columns, with the first column indicating the metric, the next 50 columns the metric values of 50 runs, and the last two columns the mean and std values of the 50 runs.
 
 ## Declaration
 
