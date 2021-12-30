@@ -74,7 +74,6 @@ for r in range(repeat_time):
                privileged_groups=privileged_groups)
     RW.fit(dataset_orig_train)
     dataset_transf_train = RW.transform(dataset_orig_train)
-    dataset_transf_test = RW.transform(dataset_orig_test)
 
     clf = get_classifier(clf_name)
     clf = clf.fit(dataset_transf_train.features, dataset_transf_train.labels,sample_weight=dataset_transf_train.instance_weights.ravel())
