@@ -1,6 +1,6 @@
-# Revisiting Bias Mitigation Methods in Software Fairness
+# A Comprehensive Empirical Study of Bias Mitigation Methods for Machine Learning Classifiers
 
-Welcome to visit the homepage of our TSE submission entitled "Revisiting Bias Mitigation Methods in Software Fairness". The homepage contains scripts and data used in this paper.
+Welcome to visit the homepage of our TOSEM submission entitled "A Comprehensive Empirical Study of Bias Mitigation Methods for Machine Learning Classifiers". The homepage contains scripts and data used in this paper.
 
 ## Experimental environment
 
