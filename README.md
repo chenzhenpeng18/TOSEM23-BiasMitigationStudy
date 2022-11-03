@@ -28,17 +28,21 @@ We use the five default datasets supported by the AIF360 toolkit. Please refer t
 ## Scripts and results
 The repository contains five folders:
 
-* ```Fair360/``` contains code for implementing the 15 bias mitigation methods in AIF360.
+* ```Fair360/``` and ```Fair360_dl/``` contains code for implementing the 15 bias mitigation methods in AIF360.
 
 * ```Fairway/``` contains code for implementing Fairway, a bias mitigation method proposed by [Chakraborty et al.](https://doi.org/10.1145/3368089.3409697) in ESEC/FSE 2020.
 
-* ```Fair-SMOTE/``` contains code for implementing Fair-SMOTE, a bias mitigation method proposed by [Chakraborty et al.](https://doi.org/10.1145/3468264.3468537) in ESEC/FSE 2021.
+* ```Fair-SMOTE/``` and ```Fair-SMOTE_dl/``` contains code for implementing Fair-SMOTE, a bias mitigation method proposed by [Chakraborty et al.](https://doi.org/10.1145/3468264.3468537) in ESEC/FSE 2021.
 
 * ```Fairea/``` contains code for measuring fairness-performance trade-offs. It is implemented based on Fairea, a trade-off benchmark method proposed by [Hort et al.](https://doi.org/10.1145/3468264.3468565) in ESEC/FSE 2021.
 
-* ```Result/``` contains the raw results of the original models and the models after applying 17 bias mitigation methods in eight tasks. Each file in this folder has 53 columns, with the first column indicating the metric, the next 50 columns the metric values of 50 runs, and the last two columns the mean and std values of the 50 runs.
+* ```Fairea_baseline/``` contains the fairness-performance trade-off baselines constructed by Fairea.
+  
+* ```Results/``` contains the raw results of the original models and the models after applying 17 bias mitigation methods in eight tasks. Each file in this folder has 51 columns, with the first column indicating the metric, and the next 50 columns the metric values of 50 runs.
+
+* ```Analysis_code/``` contains the scripts to produce all the results in the paper.
 
 ## Declaration
 
-Thanks to the authors of existing bias mitigation methods for open source, to facilitate our implementation of this paper. Therefore, when using our code or data for your work, please also consider citing their papers, including [AIF360](https://arxiv.org/abs/1810.01943), [Fairway](https://doi.org/10.1145/3368089.3409697), [Fair-SMOTE](https://doi.org/10.1145/3468264.3468537), and [Fairea](https://doi.org/10.1145/3468264.3468565).  
+Thanks to the authors of existing bias mitigation methods for open source, to facilitate our implementation of this paper. Therefore, when using our code or data for your work, please also consider citing their papers, including [AIF360](https://arxiv.org/abs/1810.01943), [Fairway](https://doi.org/10.1145/3368089.3409697), [Fair-SMOTE](https://doi.org/10.1145/3468264.3468537), and [Fairea](https://doi.org/10.1145/3468264.3468565).
 
