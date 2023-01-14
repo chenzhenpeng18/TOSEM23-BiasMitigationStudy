@@ -102,9 +102,8 @@ def create_baseline(clf_name,dataset_orig, privileged_groups,unprivileged_groups
                     macrop = precision_score(dataset_orig_test.labels, dataset_orig_test_pred.labels, average='macro')
                     macror = recall_score(dataset_orig_test.labels, dataset_orig_test_pred.labels, average='macro')
                     macrof1=f1_score(dataset_orig_test.labels, dataset_orig_test_pred.labels, average='macro')
-                    auc = roc_auc_score(dataset_orig_test.labels, dataset_orig_test_pred.labels)
                     mcc=matthews_corrcoef(dataset_orig_test.labels, dataset_orig_test_pred.labels)
-                    hist.append([spd,aod,eod,erd, acc, macrop, macror, macrof1, auc, mcc])
+                    hist.append([spd,aod,eod,erd, acc, macrop, macror, macrof1, mcc])
                 results[name][degree] += hist
     return results
 
