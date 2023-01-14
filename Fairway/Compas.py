@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     results = {}
     performance_index = ['accuracy', 'recall1', 'recall0', 'recall_macro', 'precision1', 'precision0',
-                         'precision_macro', 'f1score1', 'f1score0', 'f1score_macro', 'roc_auc', 'mcc', 'spd',
+                         'precision_macro', 'f1score1', 'f1score0', 'f1score_macro',  'mcc', 'spd',
                          'aod', 'eod', 'erd']
     for p_index in performance_index:
         results[p_index] = []

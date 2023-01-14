@@ -17,7 +17,6 @@ def measure_final_score(test_df, clf, X_train, y_train, X_test, y_test, biased_c
     f1score1 = f1_score(y_test, y_pred, pos_label=1)
     f1score0 = f1_score(y_test, y_pred, pos_label=0)
     f1score_macro = f1_score(y_test, y_pred, average='macro')
-    roc_auc = roc_auc_score(y_test, y_pred)
     mcc = matthews_corrcoef(y_test, y_pred)
 
     test_df_copy = copy.deepcopy(test_df)
@@ -34,4 +33,4 @@ def measure_final_score(test_df, clf, X_train, y_train, X_test, y_test, biased_c
     eod = abs(classified_metric_pred.equal_opportunity_difference())
     erd = abs(classified_metric_pred.error_rate_difference())
 
-    return accuracy, recall1, recall0, recall_macro, precision1, precision0, precision_macro, f1score1, f1score0, f1score_macro, roc_auc, mcc, spd,aod,eod,erd
+    return accuracy, recall1, recall0, recall_macro, precision1, precision0, precision_macro, f1score1, f1score0, f1score_macro, mcc, spd,aod,eod,erd
