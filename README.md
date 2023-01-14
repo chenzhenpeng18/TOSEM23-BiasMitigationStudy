@@ -1,6 +1,6 @@
-# A Comprehensive Empirical Study of Bias Mitigation Methods for Machine Learning Classifiers
+# [TOSEM'23] A Comprehensive Empirical Study of Bias Mitigation Methods for Machine Learning Classifiers
 
-Welcome to visit the homepage of our TOSEM submission entitled "A Comprehensive Empirical Study of Bias Mitigation Methods for Machine Learning Classifiers". The homepage contains scripts and data used in this paper.
+Welcome to visit the homepage of our TOSEM'23 paper entitled "A Comprehensive Empirical Study of Bias Mitigation Methods for Machine Learning Classifiers". The homepage contains scripts and data used in this paper.
 
 ## Experimental environment
 
@@ -19,8 +19,6 @@ pip install numpy
 pip install shapely
 pip install matplotlib
 pip install "tensorflow >= 1.13.1, < 2"
-pip install --upgrade protobuf==3.20.0
-pip install fairlearn
 ```
 
 ## Dataset
@@ -48,3 +46,13 @@ The repository contains five folders:
 
 Thanks to the authors of existing bias mitigation methods for open source, to facilitate our implementation of this paper. Therefore, when using our code or data for your work, please also consider citing their papers, including [AIF360](https://arxiv.org/abs/1810.01943), [Fairway](https://doi.org/10.1145/3368089.3409697), [Fair-SMOTE](https://doi.org/10.1145/3468264.3468537), and [Fairea](https://doi.org/10.1145/3468264.3468565).
 
+## Citation
+Please consider citing the following paper when using our code or data.
+```
+@article{zhenpengTOSEM2023,
+  title={A Comprehensive Empirical Study of Bias Mitigation Methods for Machine Learning Classifiers},
+  author={Zhenpeng Chen and Jie M. Zhang and Federica Sarro and Mark Harman},
+  journal={ACM Transactions on Software Engineering and Methodology},
+  year={2023}
+}
+```
