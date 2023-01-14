@@ -34,7 +34,7 @@ res = create_baseline(clf_name,dataset_orig, privileged_groups,unprivileged_grou
                     data_splits=50,repetitions=50,odds=mutation_strategies,options = [0,1],
                    degrees = degrees)
 fair_list = ['SPD', 'AOD', 'EOD', 'ERD']
-per_list = ['Acc', 'Mac-P', 'Mac-R', 'Mac-F1', 'AUC', 'MCC']
+per_list = ['Acc', 'Mac-P', 'Mac-R', 'Mac-F1', 'MCC']
 
 res_forplot = {}
 index = '0'

@@ -13,7 +13,7 @@ for i in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
     for j in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex','German-Age','Bank-Age','Mep-Race']:
         base_points[i][j]={}
 
-base_points_key1 = ['SPD','AOD', 'EOD', 'ERD', 'Acc', 'Mac-P', 'Mac-R', 'Mac-F1', 'AUC', 'MCC']
+base_points_key1 = ['SPD','AOD', 'EOD', 'ERD', 'Acc', 'Mac-P', 'Mac-R', 'Mac-F1', 'MCC']
 for dataset in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex','German-Age','Bank-Age','Mep-Race']:
     (dataset_pre,dataset_aft) = dataset.lower().split('-')
     if dataset == 'Mep-Race':
@@ -32,11 +32,11 @@ for i in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
     data[i]={}
     for j in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex','German-Age','Bank-Age','Mep-Race']:
         data[i][j]={}
-        for k in ['F-P','F-R','F-F1','UnF-P','UnF-R','UnF-F1','Acc','Mac-P','Mac-R','Mac-F1','AUC', 'MCC','SPD','AOD','EOD','ERD']:
+        for k in ['F-P','F-R','F-F1','UnF-P','UnF-R','UnF-F1','Acc','Mac-P','Mac-R','Mac-F1', 'MCC','SPD','AOD','EOD','ERD']:
             data[i][j][k]={}
 
 data_key_value = {1: 'Acc', 2: 'F-R', 3: 'UnF-R', 4: 'Mac-R', 5: 'F-P', 6: 'UnF-P', 7: 'Mac-P', 8: 'F-F1', 9: 'UnF-F1',
-                  10: 'Mac-F1', 11: 'AUC', 12: 'MCC', 13: 'SPD', 14: 'AOD', 15: 'EOD', 16: 'ERD'}
+                  10: 'Mac-F1', 11: 'MCC', 12: 'SPD', 13: 'AOD', 14: 'EOD', 15: 'ERD'}
 
 for j in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
     for name in ['fairsmote', 'eo',  'ceo1', 'ceo2', 'ceo3', 'default', 'dir', 'lfr', 'rw', 'roc1', 'roc2', 'roc3']:
@@ -74,7 +74,7 @@ for j in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
                 count = count + 1
                 data[j][dataset][data_key_value[count]][name] = list(map(float, line.strip().split('\t')[1:51]))
             fin.close()
-        for mm in ['F-P', 'F-R', 'F-F1', 'UnF-P', 'UnF-R', 'UnF-F1', 'Acc', 'Mac-P', 'Mac-R', 'Mac-F1', 'AUC', 'MCC',
+        for mm in ['F-P', 'F-R', 'F-F1', 'UnF-P', 'UnF-R', 'UnF-F1', 'Acc', 'Mac-P', 'Mac-R', 'Mac-F1', 'MCC',
                   'SPD', 'AOD', 'EOD', 'ERD']:
             data[j]['Bank-Age'][mm][name] = '/'
             data[j]['Mep-Race'][mm][name] = '/'
@@ -85,7 +85,7 @@ for dataset in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex'
     region_area[dataset]={}
     for fairmetric in ['SPD','AOD','EOD']:
         region_area[dataset][fairmetric] = {}
-        for permetric in ['AUC', 'Acc','Mac-P','Mac-R','Mac-F1','MCC']:
+        for permetric in ['Acc','Mac-P','Mac-R','Mac-F1','MCC']:
             region_area[dataset][fairmetric][permetric]={}
             for algo in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
                 region_area[dataset][fairmetric][permetric][algo]={}
@@ -94,7 +94,7 @@ for dataset in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex'
 for i in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
     for j in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex','German-Age','Bank-Age','Mep-Race']:
         for fairmetric in ['SPD','AOD','EOD']:
-            for permetric in ['AUC', 'Acc','Mac-P','Mac-R','Mac-F1','MCC']:
+            for permetric in ['Acc','Mac-P','Mac-R','Mac-F1','MCC']:
                 methods = dict()
                 methods_list = ['lfr', 'rw', 'dir', 'pr', 'ad', 'mfc1', 'mfc2', 'roc1', 'roc2', 'roc3', 'ceo1', 'ceo2', 'ceo3', 'eo','fairway', 'fairsmote']
                 if j not in ['Bank-Age','Mep-Race']:
@@ -122,7 +122,7 @@ for z in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex','Germ
     prop_count[z] = {}
     for name in ['op', 'lfr', 'rw', 'dir', 'pr', 'ad', 'mfc1', 'mfc2', 'roc1', 'roc2', 'roc3', 'ceo1', 'ceo2', 'ceo3', 'eo','fairway', 'fairsmote']:
         prop_count[z][name]=0
-    for permetric in ['AUC','Acc','Mac-P','Mac-R','Mac-F1','MCC']:
+    for permetric in ['Acc','Mac-P','Mac-R','Mac-F1','MCC']:
         for fairmetric in ['SPD','AOD','EOD']:
             for i in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
                 for name in ['op', 'lfr', 'rw', 'dir', 'pr', 'ad', 'mfc1', 'mfc2', 'roc1', 'roc2', 'roc3', 'ceo1', 'ceo2', 'ceo3', 'eo','fairway', 'fairsmote']:
@@ -154,7 +154,7 @@ for z in ['Adult-Sex','Adult-Race','Compas-Sex','Compas-Race','German-Sex','Germ
         if name == 'op' and z in ['Bank-Age', 'Mep-Race']:
             fout.write(' & -')
             continue
-        fout.write(' & %d' % int(100*prop_count[z][name]/126))
+        fout.write(' & %d' % int(100*prop_count[z][name]/105))
         fout.write('\\%')
     fout.write('\\\\')
     fout.write('\n')
@@ -168,10 +168,10 @@ for name in ['op', 'lfr', 'rw', 'dir', 'pr', 'ad', 'mfc1', 'mfc2', 'roc1', 'roc2
             continue
         total_count += prop_count[z][name]
     if name == 'op':
-        fout.write(' & %d' % int(100*total_count/756))
+        fout.write(' & %d' % int(100*total_count/630))
         fout.write('\\%')
     else:
-        fout.write(' & %d' % int(100 * total_count /1008))
+        fout.write(' & %d' % int(100 * total_count /840))
         fout.write('\\%')
 fout.write('\\\\')
 fout.write('\n')

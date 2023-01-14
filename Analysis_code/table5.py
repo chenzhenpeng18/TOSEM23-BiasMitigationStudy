@@ -60,7 +60,6 @@ for eachmetric in metric_list:
     for algo in ['rf', 'lr', 'svm', 'dl', 'dl2', 'dl3', 'dl4']:
         rank_result[eachmetric][algo] ={}
         for name in ['op', 'lfr', 'rw', 'dir', 'pr', 'ad', 'mfc1', 'mfc2', 'roc1', 'roc2', 'roc3', 'ceo1', 'ceo2', 'ceo3', 'eo','fairway', 'fairsmote']:
-            rank_result[eachmetric][algo][name]={}
             rank_result[eachmetric][algo][name]=[]
 
 
